@@ -2,5 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+  ],
+  "packageRules": [
+    {
+      "packageNames": [
+        "gcr.io/kaniko-project/executor"
+      ],
+      "versionScheme": "regex:^(?:(?<compatibility>.*)-)?v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)$"
+    }
   ]
 }
